@@ -114,8 +114,8 @@ func findBestStudent() -> String{
     return bestStudent
 }
 
-func studentsSpeech(name: String){
-    print("It's a \(name)'s speech. Bla-bla-bla.  ")
+func studentsSpeech(){
+    print("It's a \(findBestStudent())'s speech. Bla-bla-bla.")
 }
 
 func giveDiplom(){
@@ -124,8 +124,8 @@ func giveDiplom(){
     }
 }
 
-func deductStudents(){
-    students.removeAll()
+func deductStudent(_ name: String){
+    students.removeValue(forKey: name)
 }
 
 addToUniversity(name: "Vanya")
@@ -138,11 +138,14 @@ addStudentMark(mark: 95.2, name: "Vika")
 addStudentMark(mark: 73.8, name: "Oleg")
 addStudentMark(mark: 84.9, name: "Anya")
 print(students)
-studentsSpeech(name: findBestStudent())
+studentsSpeech()
 
 giveDiplom()
 
-deductStudents()
+deductStudent("Vanya")
+deductStudent("Vika")
+deductStudent("Oleg")
+deductStudent("Anya")
 
 print(students)
 /*
