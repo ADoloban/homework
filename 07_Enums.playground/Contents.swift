@@ -28,20 +28,20 @@ for genre in Music.allCases{
 //Done👆
 
 // - проинициализируйте константу singerStyle, используя rawValue
-let singerStyle = Music.rap.rawValue
+let singerStyle: Music? = Music(rawValue: "Guf")
 
 // - напишите switch statement, который будет сравнивать singerStyle с cases для каждого направления музыки и печатать название какой-нибудь песни соответствующего жанра
 
 switch singerStyle {
-case Music.pop.rawValue:
+case .pop:
     print("Ocean Eyes")
-case Music.rock.rawValue:
+case .rock:
     print("Numb")
-case Music.classic.rawValue:
+case .classic:
     print("Eine kleine Nachtmusik")
-case Music.rap.rawValue:
+case .rap:
     print("Баста - Моя игра")
-case Music.jazz.rawValue:
+case .jazz:
     print("Moanin'")
 default:
     print("Unknown Genre")
