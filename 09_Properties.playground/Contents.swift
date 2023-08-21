@@ -79,10 +79,11 @@ class User{
     var weight: Int {
         didSet {
             if weight < minWeight {
-                print("Lost weight!")
+                print("Lost weight! The difference in weight is \(minWeight - weight) kilograms!")
                 weight = minWeight
             } else if weight > maxWeight {
-                print("Gained weight!")
+                print("Gained weight! The difference in weight is \(maxWeight - weight) kilograms!")
+                weight = maxWeight
             }
         }
     }
