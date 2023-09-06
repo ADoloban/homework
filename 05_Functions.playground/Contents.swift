@@ -64,7 +64,7 @@ let numbers: [Int] = [2, 4, 8, 45, -9]
 
 // first solution
 func findMinAndMax(in array: [Int]) -> (Int?, Int?){
-    return(array.min(), array.max())
+    (array.min(), array.max())
 }
 
 //second solution
